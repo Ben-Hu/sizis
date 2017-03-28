@@ -1,0 +1,96 @@
+<DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Sizis Game">
+        <meta name="author" content="Ben Hu">
+
+        <title>Sizis</title>
+
+        <link rel="shortcut icon" href="lumera_axis_small.png"/>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="css/bh.css" rel="stylesheet">
+
+        <!-- FontAwesome -->
+        <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- Fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Abel|Poiret+One' rel='stylesheet' type='text/css'>
+
+    </head>
+
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+        <!-- Intro Header -->
+        <header class="intro">
+            <div class="intro-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h1 class="brand-heading"><img src="newthing_smaller.png"></h1>
+                            <h1 class="brand-heading">Sizis</h1>
+			    <h1 class="text-center" id="lvlUpCountdown"><h1>
+                            <ul class="list-inline banner-social-buttons">
+                                <li>
+                                    <a href="./builds" class="btn btn-default btn-lg"><i class="fa fa-wrench fa-fw"></i><span class="network-name"> Builds</span></a>
+                                </li>
+
+                                <li>
+                                    <a href="./builds/BETA_PRES_1_OSX.zip" download="" class="btn btn-default btn-lg"><i class="fa fa-apple fa-fw"></i><span class="network-name"> OSX</span></a>
+                                </li> 
+                                <li>
+                                    <a href="./builds/BETA_PRES_1_WIN.zip" download="" class="btn btn-default btn-lg"><i class="fa fa-windows fa-fw"></i><span class="network-name"> Win</span></a>
+                                </li>
+                            </ul>
+                            <ul class="list-inline banner-social-buttons">
+                                <li>
+                                    <a href="./builds/latest" class="btn btn-default btn-lg"><i class="fa fa-gamepad fa-fw"></i><span class="network-name"> Latest</span></a>
+                                </li>
+                                <li>
+                                    <a href="./builds/alpha/webgl" class="btn btn-default btn-lg"><i class="fa fa-gamepad fa-fw"></i><span class="network-name"> Alpha</span></a>
+                                </li>
+                            </ul>
+                            <a href="mailto:sizisgame@gmail.com" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i><span class="network-name">sizisgame@gmail.com</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <footer style="background-color: rgba(0,0,0,1)"> 
+	    <div class="container text-center">
+                <a href="//www.ben-hu.com" class="btn btn-default btn-lg"><i class="fa fa-male fa-fw"></i><span class="network-name">Hi</span></a>
+            </div>
+        </footer> 
+
+        <script>
+            var lvlUpDate = new Date("Apr 5, 2017 17:00:00").getTime();
+
+            var x = setInterval(function() {
+                var currentDate = new Date().getTime();
+                var timeToLvlUp = lvlUpDate - currentDate;
+                var days = Math.floor(timeToLvlUp / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((timeToLvlUp % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((timeToLvlUp% (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((timeToLvlUp % (1000 * 60)) / 1000);
+                document.getElementById("lvlUpCountdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+                if (timeToLvlUp < 0) {
+                    clearInterval(x);
+                    document.getElementById("lvlUpCountdown").innerHTML = "It's Time!";
+                }
+            }, 1000);
+        </script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+
+</html>
