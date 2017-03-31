@@ -88,7 +88,7 @@ a:hover, a:focus {
             rgba(0, 0, 0, 1.00)
         ),
         /* url(../assets/img/alpha-2-3.jpg)  */
-        url(../assets/img/anothaone.jpg) 
+        url(../assets/img/s0.jpg) 
         no-repeat
         bottom
         center
@@ -334,4 +334,6 @@ body {
     padding-right: -70px;
 }
 
-
+#screenshots {
+    white-space: nowrap;
+}
