@@ -87,8 +87,6 @@
             </div>
         </div>
 
-
-
         <div class="idk" style="margin-bottom:150px">
             <div class="container text-center">
                 <h1 class="brand-heading">The Team</h1>
@@ -136,7 +134,6 @@
 
         <script>
             var lvlUpDate = new Date("Apr 5, 2017 17:00:00").getTime();
-
             var x = setInterval(function() {
                 var currentDate = new Date().getTime();
                 var timeToLvlUp = lvlUpDate - currentDate;
@@ -151,22 +148,22 @@
                 }
             }, 1000);
         </script>
-	<script>
-	    var slideIndex = 0;
-	    carousel();
-	    function carousel() {
-		var i;
-		var x = document.getElementsByClassName("screenshot");
-		for (i = 0; i < x.length; i++) {
-		  x[i].style.display = "none"; 
-		}
-		slideIndex++;
-		if (slideIndex > x.length) {slideIndex = 1} 
-		x[slideIndex-1].style.display = "block"; 
-		setTimeout(carousel, 3500);
-	    }
-	</script>
-
+        
+        <script>
+            var slideIndex = 0;
+            carousel();
+            function carousel() {
+            var i;
+            var x = document.getElementsByClassName("screenshot");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none"; 
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {slideIndex = 1} 
+            x[slideIndex-1].style.display = "block"; 
+            setTimeout(carousel, 3500);
+            }
+        </script>
 
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>
